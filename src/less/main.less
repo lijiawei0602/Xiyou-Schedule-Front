@@ -1,0 +1,101 @@
+*{
+	margin:0;
+	padding:0;
+}
+body{
+	width:100%;
+	height:100%;
+	font-family: 'Merienda', cursive;
+	#top{
+		position:relative;
+		width:100%;
+		height:3rem;
+		background-color: #B1CFFB;
+		#topTitle{
+			position:absolute;
+			width:100%;
+			line-height: 3rem;
+			text-align: center;
+			font-size: 1.5rem;
+		}
+		#topTitleBack{
+			float:right;
+			width:4rem;
+			height:2rem;
+			line-height: 2rem;
+			margin-top: 0.5rem;
+			margin-right: 0.5rem;
+			border:1px solid #000;
+			border-radius: 5px;
+			background-image: url("../img/exit.png");
+			background-position: left center;
+			background-size: 1.5rem;
+			background-repeat: no-repeat;
+			text-indent: 1.5rem;
+		}
+	}
+	.m-slider{
+		width:100%;
+		height:27rem;
+		margin-top: 5rem;
+		overflow:hidden;
+		.cnt{
+			position:relative;
+			width:500%;
+			height:100%;
+			list-style: none;
+			overflow:hidden;
+			border-radius: 5px;
+			li{	
+				@boxWidth:calc(~"100% / 5 * 0.8");
+				float:left;
+				margin-right: calc(~"@{boxWidth} / 8");
+				margin-left: calc(~"@{boxWidth} / 8");
+				width:@boxWidth;
+				height:100%;
+				background-color: white;
+				#cardTop{
+					position:relative;
+					width:100%;
+					height:8rem;
+					text-align: center;
+					line-height: 8rem;
+					font-size: 2rem;
+					background-color: #B1CFFB;
+				}
+				#cardMain{
+					position:relative;
+					width:100%;
+					height:calc(~"100% - 8rem");
+					.per{
+						text-indent: 3rem;
+						font-size: 1rem;
+						margin-top: 2rem;
+						margin-bottom: 2rem;
+						span{
+							position:relative;
+							left:1.5rem;
+							&::after{
+								text-indent: 0;
+								display:block;
+								position:absolute;
+								top:1rem;
+								left:5rem;
+								width:6rem;
+								content:attr(data-attr);
+								position:relative;
+								font-size: 0.8rem;
+								color:#BFBFC1;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.f-anim{
+	transition:left .2s linear;
+	-webkit-transition:left .2s linear;
+}

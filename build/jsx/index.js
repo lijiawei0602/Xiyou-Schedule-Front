@@ -113,7 +113,7 @@
                         // console.log(totalSession);
                         window.location.href  = "main.html?sessionId="+escape(totalSession)+"&username="+escape(data.result.name)+"&class="+escape(data.result.class);
                     }else{
-                        alert("账号|密码|验证码错误");
+                        alert(data.result);
                     }
                 }).bind(this));
             }else{
